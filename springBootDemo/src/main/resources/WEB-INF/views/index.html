@@ -1,0 +1,31 @@
+ <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>index</title>
+        <script src="${ctxPath}/js/jquery.min.js?v=2.1.4"></script>
+    </head>
+    <body>
+    index
+
+    <hr>
+    获取项目的context-path-->${ctxPath}
+    
+    <hr>
+    获取后台返回的数据--->${shiro.hasRole("user")}
+    <hr>
+    
+    @if(shiro.hasPermission("user:select")){
+    okkk
+    @}
+    <hr>
+    @if(shiro.hasRole("admin")){
+     hasRole=admin
+    @}
+     <hr>
+    
+    @if(shiro.hasRole("user")){
+     hasRole=user
+    @}
+    </body>
+    </html>
